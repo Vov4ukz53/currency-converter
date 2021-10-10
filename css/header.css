@@ -1,0 +1,28 @@
+.header {
+    background-color: #105a23;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+.header__title {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .header {
+        margin-bottom: 40px;
+        border-radius: none;
+    }
+    .header__title {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 490px) {
+    .header {
+        margin-bottom: 20px;
+    }
+}
