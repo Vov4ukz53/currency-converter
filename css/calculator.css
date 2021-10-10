@@ -1,7 +1,30 @@
+.calculator {
+	position: relative;
+	padding-top: 80px;
+	background-image: url('../img/convertor_bg.jpeg');
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	color: #fff;
+}
+
+.calculator::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.76);
+}
+
 .formCalculator {
-	background-color: rgb(231, 224, 224);
+	position: relative;
+	z-index: 1;
+	background-color: rgba(231, 224, 224, 0.568);
 	border-radius: 5px;
 	padding: 20px;
+	box-shadow: 3px 3px 5px #ffffff;
 }
 
 .formCalculator__fieldset {
@@ -54,6 +77,8 @@
 }
 
 .calculator__footer {
+	position: relative;
+	z-index: 1;
 	text-align: center;
 }
 
@@ -64,15 +89,26 @@
 }
 
 .calculator__info {
-	color: #383636;
+	color: #dbd7d7;
 	line-height: 1.5;
 	margin-top: 0;
 	padding: 0 15px;
 }
 
+@media (max-width: 767px){
+	.calculator {
+		padding-top: 40px;
+	}
+}
+
 @media (max-width: 490px) {
+	.calculator {
+		padding-top: 30px;
+	}
+
 	.formCalculator {
 		border-radius: 0;
+		box-shadow: none;
 	}
 
 	.calculator__body {
@@ -87,11 +123,11 @@
 		margin-bottom: 10px;
 	}
 
-	.formCalculator__input{
+	.formCalculator__input {
 		width: 100%;
 	}
 
-	.formCalculator__select{
+	.formCalculator__select {
 		width: 100%;
 	}
 }
