@@ -18,19 +18,18 @@ form.addEventListener("submit", (event) => {
 	switch (formSelect.value) {
 		case "eur":
 			calculatorResult.innerText = `${formInput.value} pln = ${eur} ${currency}`
-			calculatorChange.innerText = "0.22 eur";
+			calculatorChange.innerText = "0.22 EUR";
 			break;
 
 		case "usd":
 			calculatorResult.innerText = `${formInput.value} pln = ${usd} ${currency}`
-			calculatorChange.innerText = "0.25 usd";
+			calculatorChange.innerText = "0.25 USD";
 			break;
 
 		case "gbp":
 			calculatorResult.innerText = `${formInput.value} pln = ${gbp} ${currency}`
-			calculatorChange.innerText = "0.19 gbp";
+			calculatorChange.innerText = "0.19 GBP";
 			break;
 	}
 
-	
 });
