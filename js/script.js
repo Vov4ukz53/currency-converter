@@ -9,7 +9,7 @@
 				return amount * usd;
 
 			case "gbp":
-				return amount * gbp
+				return amount * gbp;
 		}
 	}
 
