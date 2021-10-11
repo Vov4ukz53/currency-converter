@@ -8,7 +8,7 @@
 	color: #fff;
 }
 
-.calculator::after{
+.calculator::after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -95,7 +95,7 @@
 	padding: 0 15px;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
 	.calculator {
 		padding-top: 40px;
 	}
@@ -105,28 +105,22 @@
 	.calculator {
 		padding-top: 30px;
 	}
-
 	.formCalculator {
 		border-radius: 0;
 		box-shadow: none;
 	}
-
 	.calculator__body {
 		margin: 0 -15px;
 	}
-
 	.formCalculator {
 		padding: 10px;
 	}
-
 	.formCalculator__labelText {
 		margin-bottom: 10px;
 	}
-
 	.formCalculator__input {
 		width: 100%;
 	}
-
 	.formCalculator__select {
 		width: 100%;
 	}

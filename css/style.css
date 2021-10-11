@@ -2,9 +2,8 @@ html {
 	box-sizing: border-box;
 	height: 100%;
 }
-*,
-::after,
-::before {
+
+*, ::after, ::before {
 	box-sizing: inherit;
 }
 
@@ -26,6 +25,3 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
-
-
-

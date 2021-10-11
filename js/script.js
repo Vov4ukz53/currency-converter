@@ -50,7 +50,6 @@
 
 		changeResultText(amount, result, currency);
 		changeInfoText(eur, usd, gbp, currency);
-
 	}
 
 	const init = () => {
