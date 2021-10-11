@@ -7,3 +7,5 @@ https://vov4ukz53.github.io/currency-converter/
 - Flexbox
 - CSS
 - JavaScript/ES6+ Features
+## How to use
+![how to use](https://ibb.co/tz6txPt)
