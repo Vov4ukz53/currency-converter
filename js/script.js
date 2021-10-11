@@ -1,35 +1,63 @@
+{
+	const calculateResult = (amount, eur, usd, gbp, currency) => {
 
-let form = document.querySelector(".js-form");
-let formInput = document.querySelector(".js-form-input");
-let formSelect = document.querySelector(".js-form-select");
-let calculatorResult = document.querySelector(".js-calculator-result");
-let calculatorChange = document.querySelector(".js-calculator-change");
+		switch (currency) {
+			case "eur":
+				return amount * eur;
 
+			case "usd":
+				return amount * usd;
 
-
-form.addEventListener("submit", (event) => {
-	event.preventDefault();
-
-	let eur = (formInput.value * 0.22).toFixed(2);
-	let usd = (formInput.value * 0.25).toFixed(2);
-	let gbp = (formInput.value * 0.19).toFixed(2);
-	let currency = formSelect.value;
-
-	switch (formSelect.value) {
-		case "eur":
-			calculatorResult.innerText = `${formInput.value} pln = ${eur} ${currency}`
-			calculatorChange.innerText = "0.22 EUR";
-			break;
-
-		case "usd":
-			calculatorResult.innerText = `${formInput.value} pln = ${usd} ${currency}`
-			calculatorChange.innerText = "0.25 USD";
-			break;
-
-		case "gbp":
-			calculatorResult.innerText = `${formInput.value} pln = ${gbp} ${currency}`
-			calculatorChange.innerText = "0.19 GBP";
-			break;
+			case "gbp":
+				return amount * gbp
+		}
 	}
 
-});
+	const changeResultText = (amount, result, currency) => {
+		const calculatorResult = document.querySelector(".js-calculator-result");
+		calculatorResult.innerText = `${amount} pln = ${result.toFixed(2)} ${currency}`
+	}
+
+	const changeInfoText = (eur, usd, gbp, currency) => {
+		const calculatorChange = document.querySelector(".js-calculator-change");
+
+		switch (currency) {
+			case "eur":
+				return calculatorChange.innerText = `${eur} ${currency.toUpperCase()}`;
+
+			case "usd":
+				return calculatorChange.innerText = `${usd} ${currency.toUpperCase()}`;
+
+			case "gbp":
+				return calculatorChange.innerText = `${gbp} ${currency.toUpperCase()}`;
+		};
+	}
+
+	const onFormSubmit = (event) => {
+		event.preventDefault();
+
+		const eur = 0.22;
+		const usd = 0.25;
+		const gbp = 0.19;
+
+		const formInput = document.querySelector(".js-form-input");
+		const formSelect = document.querySelector(".js-form-select");
+
+		const amount = +formInput.value;
+		const currency = formSelect.value;
+
+		const result = calculateResult(amount, eur, usd, gbp, currency);
+
+		changeResultText(amount, result, currency);
+		changeInfoText(eur, usd, gbp, currency);
+
+	}
+
+	const init = () => {
+		const form = document.querySelector(".js-form");
+
+		form.addEventListener("submit", onFormSubmit);
+	};
+
+	init();
+}
