@@ -15,7 +15,7 @@
 
 	const changeResultText = (amount, result, currency) => {
 		const calculatorResult = document.querySelector(".js-calculator-result");
-		calculatorResult.innerText = `${amount} pln = ${result.toFixed(2)} ${currency}`
+		calculatorResult.innerText = `${amount.toFixed(2)} pln = ${result.toFixed(2)} ${currency}`;
 	}
 
 	const changeInfoText = (eur, usd, gbp, currency) => {
