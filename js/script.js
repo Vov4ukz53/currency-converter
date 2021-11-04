@@ -11,12 +11,12 @@
 			case "gbp":
 				return amount * gbp;
 		}
-	}
+	};
 
 	const changeResultText = (amount, result, currency) => {
 		const calculatorResult = document.querySelector(".js-calculator-result");
 		calculatorResult.innerText = `${amount.toFixed(2)} pln = ${result.toFixed(2)} ${currency}`;
-	}
+	};
 
 	const changeInfoText = (eur, usd, gbp, currency) => {
 		const calculatorChange = document.querySelector(".js-calculator-change");
@@ -30,8 +30,8 @@
 
 			case "gbp":
 				return calculatorChange.innerText = `${gbp} ${currency.toUpperCase()}`;
-		};
-	}
+		}
+	};
 
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -50,7 +50,7 @@
 
 		changeResultText(amount, result, currency);
 		changeInfoText(eur, usd, gbp, currency);
-	}
+	};
 
 	const init = () => {
 		const form = document.querySelector(".js-form");

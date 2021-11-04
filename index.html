@@ -25,37 +25,35 @@
 	<main class="page">
 		<section class="calculator">
 			<div class="container">
-				<div class="calculator__body">
-					<form class="formCalculator js-form">
-						<fieldset class="formCalculator__fieldset">
-							<legend class="formCalculator__legend">Przelicznik walut</legend>
-							<p>
-								<label class="formCalculator__label"><span class="formCalculator__labelText">Podaj kwote
-										(zł):</span>
-									<input autofocus required class="formCalculator__input js-form-input" type="number"
-										min="1" step="any">
-								</label>
-							</p>
-							<p>
-								<label class="formCalculator__label"><span class="formCalculator__labelText">Przelicz
-										na:</span>
-									<select class="formCalculator__select js-form-select">
-										<option value="eur" selected>EUR - Euro</option>
-										<option value="usd">USD - dolar amerykański</option>
-										<option value="gbp">GBP - Funt szterling</option>
-									</select>
-								</label>
-							</p>
-							<button class="formCalculator__button">Przelicz</button>
-						</fieldset>
-					</form>
-					<div class="calculator__footer">
-						<p class="calculator__result js-calculator-result"></p>
-						<p class="calculator__info">1 PLN = <strong class="js-calculator-change"></strong>, według
-							średniego
-							kursu NBP z dn. 30.09.2021
+				<form class="formCalculator js-form">
+					<fieldset class="formCalculator__fieldset">
+						<legend class="formCalculator__legend">Przelicznik walut</legend>
+						<p>
+							<label class="formCalculator__label"><span class="formCalculator__labelText">Podaj kwote
+									(zł):</span>
+								<input autofocus required class="formCalculator__input js-form-input" type="number"
+									min="1" step="any">
+							</label>
 						</p>
-					</div>
+						<p>
+							<label class="formCalculator__label"><span class="formCalculator__labelText">Przelicz
+									na:</span>
+								<select class="formCalculator__select js-form-select">
+									<option value="eur" selected>EUR - Euro</option>
+									<option value="usd">USD - dolar amerykański</option>
+									<option value="gbp">GBP - Funt szterling</option>
+								</select>
+							</label>
+						</p>
+						<button class="formCalculator__button">Przelicz</button>
+					</fieldset>
+				</form>
+				<div class="calculator__footer">
+					<p class="calculator__result js-calculator-result"></p>
+					<p class="calculator__info">1 PLN = <strong class="js-calculator-change"></strong>, według
+						średniego
+						kursu NBP z dn. 30.09.2021
+					</p>
 				</div>
 			</div>
 		</section>

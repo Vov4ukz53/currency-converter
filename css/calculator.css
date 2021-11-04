@@ -30,6 +30,7 @@
 .formCalculator__fieldset {
 	border: none;
 	padding: 0;
+	margin:	0;
 }
 
 .formCalculator__legend {
@@ -104,10 +105,6 @@
 @media (max-width: 490px) {
 	.calculator {
 		padding-top: 30px;
-	}
-	.formCalculator {
-		border-radius: 0;
-		box-shadow: none;
 	}
 	.calculator__body {
 		margin: 0 -15px;
